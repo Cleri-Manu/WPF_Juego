@@ -1,0 +1,68 @@
+﻿<Window x:Class="TrabajoWPF.AuxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrabajoWPF"
+        mc:Ignorable="d"
+        Title="AuxWindow" Height="550" Width="650"
+        MinHeight="550"
+        MinWidth="650">
+    <Grid Name="AuxGrid" Background="#212834">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid Background="{StaticResource BrushBackground0}" Foreground="{StaticResource BrushBackground0}"  EnableRowVirtualization="False" EnableColumnVirtualization="False" IsReadOnly="True" Name="G_auxWindow" AutoGenerateColumns="false" Grid.ColumnSpan="8" Grid.RowSpan="6" Margin="10,10,10,25" VerticalGridLinesBrush="Transparent" HorizontalGridLinesBrush="Transparent">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="Image" Width="*" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImgPath}" Height="100" HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="{StaticResource BrushBackground2}" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="Foreground" Value="{StaticResource BrushAcentoVerde}"/>
+                    <Setter Property="Height" Value="22"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                </Style>
+                <Style BasedOn="{StaticResource {x:Type DataGridCell}}" TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Background" Value="{StaticResource BrushBackground0}" />
+                    <Setter Property="Foreground" Value="{StaticResource BrushAcentoVerdeOscuro}" />
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource BrushBackground2}"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <CheckBox Name="C_Show" MaxHeight="60" MaxWidth="192" Click="C_Show_Checked" Grid.Row="5" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="20,55,30,20" Style="{StaticResource UICheckBox}" FontSize="16" Foreground="{StaticResource BrushAcentoVerde}">Mostrar cartas</CheckBox>
+        <Label Name="L_Diff" Content="Dificultad: Fácil" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalAlignment="Center" Margin="0,0,25,0" Foreground="{StaticResource BrushAcentoVerde}" FontSize="16" HorizontalAlignment="Center"/>
+        <Slider Name="S_Diff" ValueChanged="S_Diff_ValueChanged" Grid.Row="7" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="20,0,50,0" Maximum="2" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        <TextBox Name="T_Save" Height="30"  Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="2"  Margin="0,10,55,0" FontSize="16" Foreground="{StaticResource BrushAcentoVerde}" Background="{StaticResource BrushBackground0}" BorderBrush="Transparent" VerticalContentAlignment="Center"/>
+        <Button Name="B_Save" Width="135" Height="70" MaxWidth="260" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="5" Margin="15,10,5,0"  Style="{StaticResource GreenButton}" Click="B_Save_Click" VerticalAlignment="Center" HorizontalAlignment="Center">Guardar</Button>
+        <ComboBox Name="C_Save" SelectionChanged="C_Save_SelectionChanged" Width="125" Height="25" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="6" Margin="0,25,25,0" FontSize="16" Foreground="{StaticResource BrushAcentoVerde}" VerticalAlignment="Center" HorizontalAlignment="Center"  SelectedItem="{Binding Path=Game}"  DisplayMemberPath="Name"/>
+    </Grid>
+</Window>

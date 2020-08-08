@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TrabajoWPF">
+    <Color x:Key="GreenBaseColor" A="255" R="4" G="190" B="91"/>
+    <!--Text default colour-->
+    
+    <!--Text colour on hover-->
+    
+    <Color x:Key="BackgroundColorLight" A="255" R="23" G="171" B="92"/>
+    <!--Background default colour CHANGE VALUE-->
+    <Color x:Key="BackgroundColorDark" A="255" R="23" G="171" B="92"/>
+    <!--Background colour on click CHANGE VALUE-->
+    <Color x:Key="MainColorDark" A="255" R="225" G="228" B="232"/>
+    <!--Text colour on click-->
+
+    <SolidColorBrush x:Name="BorderBrush1" x:Key="BorderBrushBase" Color="#04be5b"/>
+    <!--Border default colour (same as text) -->
+    <SolidColorBrush x:Key="BorderBrushLight" Color="#05ee72"/>
+    <!--Border colour on hover (same as text) -->
+
+    <SolidColorBrush x:Key="BrushAcentoVerde" Color="#04be5b"/>
+    <SolidColorBrush x:Key="BrushAcentoVerdeOscuro" Color="#02853f"/>
+    <Color x:Key="ColorAcentoVerde" A="255" R="4" G="190" B="91"/>
+    <Color x:Key="ColorAcentoVerdeClaro" A="255" R="5" G="238" B="114"/>
+    <Color x:Key="ColorAcentoVerdeOscuro" A="255" R="23" G="171" B="92"/>
+
+    <SolidColorBrush x:Key="BrushAcentoRojo" Color="#d2335c"/>
+    <Color x:Key="ColorAcentoRojo" A="255" R="210" G="21" B="92"/>
+    <Color x:Key="ColorAcentoRojoClaro" A="255" R="230" G="31" B="82"/>
+    <Color x:Key="ColorAcentoRojoOscuro" A="255" R="171" G="38" B="72"/>
+
+
+    <SolidColorBrush x:Name="BrushBackground0" x:Key="BrushBackground0" Color="#3d4d65"/>
+    <Color x:Key="ColorBackground0" A="255" R="61" G="77" B="101"/>
+    <Color x:Key="ColorBackground0Light" A="255" R="76" G="96" B="126"/>
+    <Color x:Key="ColorBackground0Dark" A="255" R="61" G="77" B="101"/>
+    
+    <SolidColorBrush x:Name="BrushBackground1" x:Key="BrushBackground1" Color="#54657e"/>
+    <Color x:Key="ColorBackground1" A="255" R="84" G="101" B="126"/>
+    <Color x:Key="ColorBackground1Light" A="255" R="106" G="127" B="156"/>
+    <Color x:Key="ColorBackground1Dark" A="255" R="70" G="84" B="104"/>
+    
+    <SolidColorBrush x:Name="BrushBackground2" x:Key="BrushBackground2" Color="#8493a8"/>
+    <Color x:Key="ColorBackground2" A="255" R="132" G="147" B="168"/>
+
+    <SolidColorBrush x:Name="BrushAcentoAzul" x:Key="BrushAcentoAzul" Color="#0082d5"/>
+
+
+
+    <Color x:Key="PRUEBA" A="255" R="210" G="51" B="92"/>
+    
+
+
+</ResourceDictionary>
